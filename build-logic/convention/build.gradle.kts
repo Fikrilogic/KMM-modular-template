@@ -66,6 +66,11 @@ gradlePlugin{
             id = "com.convention.ktorMultiplatform"
             implementationClass = "KtorMultiplatformPlugin"
         }
+
+        register("cmpFeature"){
+            id = "com.convention.cmpFeature"
+            implementationClass = "CMPFeaturePlugin"
+        }
     }
 }
 

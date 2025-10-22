@@ -23,13 +23,14 @@ private val hierarchyTemplate = KotlinHierarchyTemplate {
         withCompilations { true }
 
         groupNonAndroid()
+        groupJsCommon()
         groupNonJsCommon()
+        groupNative()
         groupNonNative()
         groupNonJvmCommon()
-        groupNative()
-        groupJvmJsCommon()
-        groupJsCommon()
         groupJvmCommon()
+        groupJvmJsCommon()
+        groupMobile()
 
     }
 }
@@ -112,6 +113,14 @@ private fun KotlinHierarchyBuilder.groupNonJvmCommon() {
     group("nonJvmCommon"){
         groupJsCommon()
         groupNative()
+    }
+}
+
+@OptIn(ExperimentalKotlinGradlePluginApi::class)
+private fun KotlinHierarchyBuilder.groupMobile() {
+    group("mobile") {
+        withAndroidTarget()
+        withApple()
     }
 }
 

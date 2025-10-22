@@ -1,4 +1,4 @@
-rootProject.name = "PocketManagement"
+rootProject.name = "CountryQuizz"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -42,3 +42,4 @@ include(":core:datastore")
 include(":core:network")
 include(":core:ui")
 include(":core:common")
+include(":feature:auth")

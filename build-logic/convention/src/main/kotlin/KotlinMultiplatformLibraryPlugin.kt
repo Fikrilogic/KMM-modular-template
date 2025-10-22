@@ -9,8 +9,8 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 class KotlinMultiplatformLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
         with(pluginManager) {
-            apply(libs.findPlugin("kotlinMultiplatform").get().get().pluginId)
             apply(libs.findPlugin("androidLibrary").get().get().pluginId)
+            apply(libs.findPlugin("kotlinMultiplatform").get().get().pluginId)
             apply(libs.findPlugin("koin-multiplatform-convention").get().get().pluginId)
             apply(libs.findPlugin("detekt-convention").get().get().pluginId)
             apply(libs.findPlugin("kotlin-serialization").get().get().pluginId)
