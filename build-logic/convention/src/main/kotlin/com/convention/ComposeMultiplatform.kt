@@ -15,13 +15,11 @@ internal fun KotlinMultiplatformExtension.configureCompose(extensions: ComposeEx
                     implementation(deps.material3)
                     implementation(deps.materialIconsExtended)
                     implementation(deps.ui)
+                    implementation(deps.uiUtil)
+                    implementation(deps.animation)
+                    implementation(deps.animationGraphics)
                     implementation(deps.components.resources)
                     implementation(deps.components.uiToolingPreview)
-                }
-            }
-            androidMain {
-                dependencies {
-                    implementation(deps.preview)
                 }
             }
         }

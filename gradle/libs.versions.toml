@@ -33,6 +33,9 @@ kottage = "1.9.0"
 napier = "2.7.1"
 okio = "3.16.2"
 ktorfit = "2.6.4"
+material = "1.13.0"
+voyagerVersion = "1.1.0-beta02"
+uiTooling = "1.9.4"
 
 [libraries]
 android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
@@ -102,6 +105,16 @@ ktorfit-converters-flow = { group = "de.jensklingenberg.ktorfit", name = "ktorfi
 ktorfit-converters-response = { group = "de.jensklingenberg.ktorfit", name = "ktorfit-converters-response", version.ref = "ktorfit" }
 ktorfit-converters-call = { group = "de.jensklingenberg.ktorfit", name = "ktorfit-converters-call", version.ref = "ktorfit" }
 ktorfit-lib = { group = "de.jensklingenberg.ktorfit", name = "ktorfit-lib", version.ref = "ktorfit" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+#voyager
+voyager-navigator = { group = "cafe.adriel.voyager", name = "voyager-navigator", version.ref = "voyagerVersion" }
+voyager-screenmodel = { group = "cafe.adriel.voyager", name = "voyager-screenmodel", version.ref = "voyagerVersion" }
+voyager-bottomsheet = { group = "cafe.adriel.voyager", name = "voyager-bottom-sheet-navigator", version.ref = "voyagerVersion" }
+voyager-tabnavigator = { group = "cafe.adriel.voyager", name = "voyager-tab-navigator", version.ref = "voyagerVersion" }
+voyager-transitions = { group = "cafe.adriel.voyager", name = "voyager-transitions", version.ref = "voyagerVersion" }
+voyager-koin = { group = "cafe.adriel.voyager", name = "voyager-koin", version.ref = "voyagerVersion" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
 
 
 [plugins]
@@ -129,3 +142,4 @@ koin-multiplatform-convention = { id = "com.convention.multiplatformKoinPlugin",
 detekt-convention = { id = "com.convention.detektPlugin", version = "unspecified" }
 firebase-convention = { id = "com.convention.firebaseCrashlytics", version = "unspecified" }
 android-lint = { id = "com.android.lint", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
