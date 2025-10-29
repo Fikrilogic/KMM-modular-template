@@ -1,8 +1,5 @@
-import org.gradle.kotlin.dsl.project
-
 plugins {
-    alias(libs.plugins.cmp.feature.convention)
-    alias(libs.plugins.compose.multiplatform.convention)
+    alias(libs.plugins.kmm.library.convention)
 }
 
 kotlin {
@@ -11,7 +8,7 @@ kotlin {
     // which platforms this KMP module supports.
     // See: https://kotlinlang.org/docs/multiplatform-discover-project.html#targets
     android {
-        namespace = "feature.dashboard"
+        namespace = "feature.navigation"
     }
 
     // Source set declarations.
@@ -24,7 +21,7 @@ kotlin {
             dependencies {
                 implementation(libs.kotlin.stdlib)
                 // Add KMP dependencies here
-                implementation(project(":feature:navigation"))
+                implementation(libs.voyager.navigator)
             }
         }
 
@@ -37,10 +34,4 @@ kotlin {
         }
     }
 
-}
-
-compose {
-    resources {
-        packageOfResClass = "org.countryquizz.feature.dashboard.generated.resources"
-    }
 }

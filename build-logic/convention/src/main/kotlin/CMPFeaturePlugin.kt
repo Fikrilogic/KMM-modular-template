@@ -34,6 +34,7 @@ class CMPFeaturePlugin : Plugin<Project> {
             dependencies {
                 add("commonMainImplementation", project(":core:ui"))
                 add("commonMainImplementation", project(":core-base:designsystem"))
+                add("commonMainImplementation", project(":core:designsystem"))
                 add("commonMainImplementation", project(":core:data"))
 
                 add("commonMainImplementation", libs.findLibrary("voyager-navigator").get().get())
@@ -45,12 +46,6 @@ class CMPFeaturePlugin : Plugin<Project> {
                 )
                 add("commonMainImplementation", libs.findLibrary("voyager-transitions").get().get())
                 add("commonMainImplementation", libs.findLibrary("voyager-koin").get().get())
-
-
-                this.dependencies.add(
-                    "debugImplementation",
-                    this.dependencies.compose("org.jetbrains.compose.ui:ui-tooling")
-                )
 
             }
         }

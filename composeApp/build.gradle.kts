@@ -31,5 +31,6 @@ android {
 dependencies {
     debugImplementation(compose.uiTooling)
     commonMainImplementation(project(":core-base:designsystem"))
+    commonMainImplementation(project(":core:designsystem"))
 }
 
