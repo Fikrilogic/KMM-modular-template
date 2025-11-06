@@ -11,7 +11,7 @@ kotlin {
     // which platforms this KMP module supports.
     // See: https://kotlinlang.org/docs/multiplatform-discover-project.html#targets
     android {
-        namespace = "feature.dashboard"
+        namespace = "feature.quiz"
     }
 
     // Source set declarations.
@@ -25,7 +25,6 @@ kotlin {
                 implementation(libs.kotlin.stdlib)
                 // Add KMP dependencies here
                 implementation(project(":feature:navigation"))
-                implementation(project(":core:ui"))
             }
         }
 

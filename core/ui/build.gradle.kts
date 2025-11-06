@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.kmm.library.convention)
+    alias(libs.plugins.compose.multiplatform.convention)
 }
 
 kotlin {
@@ -21,6 +22,8 @@ kotlin {
             dependencies {
                 implementation(libs.kotlin.stdlib)
                 // Add KMP dependencies here
+                implementation(project(":core:designsystem"))
+                implementation(project(":core-base:designsystem"))
             }
         }
 
@@ -33,4 +36,10 @@ kotlin {
         }
     }
 
+}
+
+compose.resources {
+    publicResClass = true
+    generateResClass = always
+    packageOfResClass = "core.ui.generated.resources"
 }
