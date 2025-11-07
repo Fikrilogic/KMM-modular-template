@@ -1,5 +1,6 @@
 package feature.quiz.classic
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -35,9 +36,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
+import coil3.ImageLoader
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import coil3.request.ImageRequest
+import coil3.svg.SvgDecoder
 import core.base.designsystem.theme.MainAppTheme
 import core.designsystem.theme.AppTheme
 import core.ui.button.DynamicButtonAnswer
+import org.countryquizz.feature.quiz.generated.resources.Res
+import org.countryquizz.feature.quiz.generated.resources.id
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 class ClassicGameView : Screen {
@@ -129,13 +138,17 @@ class ClassicGameView : Screen {
             }
         }
     }
-
     @Composable
     private fun CountryFlagContent(modifier: Modifier = Modifier) {
+
         Column(
             modifier = modifier
         ) {
-
+//            AsyncImage(
+//                model = Res.getUri("files/id.svg"),
+//                contentDescription = null,
+//                modifier = Modifier.fillMaxSize()
+//            )
         }
     }
 

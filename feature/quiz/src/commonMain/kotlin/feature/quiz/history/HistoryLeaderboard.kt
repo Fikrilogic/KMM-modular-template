@@ -21,10 +21,12 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
@@ -58,7 +60,7 @@ class HistoryLeaderboard : Screen {
                                 Text(
                                     "Leaderboard",
                                     style = MaterialTheme.typography.headlineLarge,
-                                    modifier = Modifier.background(Color.Green)
+                                    fontWeight = FontWeight.SemiBold
                                 )
                             },
                             navigationIcon = {
@@ -69,6 +71,9 @@ class HistoryLeaderboard : Screen {
                                     )
                                 }
                             },
+                            colors = TopAppBarDefaults.topAppBarColors(
+                                containerColor = MaterialTheme.colorScheme.primaryContainer
+                            )
                         )
                         HorizontalDivider(
                             modifier = Modifier.fillMaxWidth(),

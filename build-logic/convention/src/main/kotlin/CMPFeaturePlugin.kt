@@ -47,6 +47,10 @@ class CMPFeaturePlugin : Plugin<Project> {
                 add("commonMainImplementation", libs.findLibrary("voyager-transitions").get().get())
                 add("commonMainImplementation", libs.findLibrary("voyager-koin").get().get())
 
+                add("commonMainImplementation", libs.findLibrary("coil-compose").get().get())
+//                add("commonMainImplementation", libs.findLibrary("coil-network").get().get())
+                add("commonMainImplementation", libs.findLibrary("coil-svg").get().get())
+
             }
         }
     }

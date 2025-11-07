@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.WorkspacePremium
@@ -93,14 +94,14 @@ object HistoryClassicLeaderboard : Tab {
                 modifier = Modifier.fillMaxWidth().padding(horizontal = MainAppTheme.spacing.md),
                 verticalArrangement = Arrangement.spacedBy(MainAppTheme.spacing.sm)
             ) {
-                items(2) {
+                itemsIndexed(listOf("Sandi", "Sandi")) { index, item ->
 
                     val randomColorIndex = Random.nextInt(0, listColor.size)
                     Card(modifier = Modifier.fillMaxWidth()) {
                         Row(
                             modifier = Modifier.fillMaxWidth().padding(
                                 vertical = MainAppTheme.spacing.md,
-                                horizontal = MainAppTheme.spacing.sm
+                                horizontal = MainAppTheme.spacing.md
                             ),
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
@@ -117,9 +118,17 @@ object HistoryClassicLeaderboard : Tab {
                                 )
                             }
                             Spacer(modifier = Modifier.width(MainAppTheme.spacing.md))
-                            Column {
-                                Text("Sandi", style = MaterialTheme.typography.titleLarge)
-                                Text("1000", style = MaterialTheme.typography.bodyLarge)
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                Column {
+                                    Text(item, style = MaterialTheme.typography.titleLarge)
+                                    Text("1000", style = MaterialTheme.typography.bodyLarge)
+                                }
+
+                                Text("#${index + 1}", style = MaterialTheme.typography.headlineSmall)
                             }
                         }
                     }

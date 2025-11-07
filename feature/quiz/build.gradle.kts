@@ -41,6 +41,8 @@ kotlin {
 
 compose {
     resources {
-        packageOfResClass = "org.countryquizz.feature.dashboard.generated.resources"
+        packageOfResClass = "org.countryquizz.feature.quiz.generated.resources"
+        publicResClass = true
+        generateResClass = always
     }
 }
